@@ -1,52 +1,59 @@
+;;; Environment
 (set-frame-parameter nil 'alpha 100)
-(load-file "macros.el")
 (remove-hook 'prog-mode-hook #'ivan/maybe-enable-ggtags)
-(ggtags-mode 0)
+(ggtags-mode   0)
+(flyspell-mode 0)
 
-(defvar refactor-refactoring "move-method")
+;;; Dependencies
+(load-file "macros.el")
 
-(defvar move-method--steps (mapcar
-                            (lambda (i) (intern-soft (format "refactor-move-method-%d" i)))
-                            (number-sequence 0 9)))
-(defvar move-method--index 0)
+;;; Refactorings
+(defconst refactor-refactorings '(move-method
+                                  move-field
+                                  extract-class
+                                  inline-class
+                                  hide-delegate
+                                  remove-middle-man))
 
+;;; Selector
+(defcustom refactor-refactoring nil
+  "The refactoring to demo."
+  :options refactor-refactorings)
+
+(defun refactor-select-refactoring (ref)
+  (interactive (list (completing-read "Set refactoring: " refactor-refactorings)))
+  (setq refactor-refactoring ref
+        refactor--steps (refactor--get-steps ref))
+  (refactor-reset))
+
+(defun refactor--get-steps (ref)
+  (apropos-internal (concat "^refactor-" ref "-[[:digit:]]+") 'commandp))
+
+(defvar-local refactor--steps nil)
+(defvar-local refactor--index 0)
+
+;;; Step functions
 (defun refactor-step-forward ()
   (interactive)
-  (refactor--run-current-step "move-method")
-  (refactor--increment-index  "move-method"))
+  (refactor--run-current-step)
+  (refactor--increment-index))
 
-(defun refactor--run-current-step (refactoring)
-  (let ((func (refactor--current-step-func refactoring)))
+(defun refactor--run-current-step ()
+  (let ((func (nth refactor--index refactor--steps)))
     (if func
         (funcall func)
-      (message "%s: finished" refactoring))))
+      (message "%s: finished" refactor-refactoring))))
 
-(defun refactor--current-step-func (refactoring)
-  (let* ((index (refactor--index-val  refactoring))
-         (steps (refactor--step-funcs refactoring)))
-    (nth index steps)))
-
-(defun refactor--step-funcs (refactoring)
-  (let* ((name (concat refactoring "--steps"))
-         (sym  (intern-soft name)))
-    (symbol-value sym)))
-
-(defun refactor--increment-index (refactoring)
-  (let ((sym (refactor--index-sym refactoring))
-        (val (refactor--index-val refactoring)))
-    (set sym (1+ val))))
-
-(defun refactor--index-sym (refactoring)
-  (intern-soft (concat refactoring "--index")))
-
-(defun refactor--index-val (refactoring)
-  (symbol-value (refactor--index-sym refactoring)))
+(defun refactor--increment-index ()
+  (setq refactor--index (1+ refactor--index)))
 
 (defun refactor-reset ()
   (interactive)
   (erase-buffer)
-  (setq move-method--index 0))
+  (setq refactor--index 0))
 
+(bind-map-set-keys ivan/leader-map
+  "u" #'refactor-select-refactoring)
 (bind-keys
  ("M-]" . refactor-step-forward)
  ("M-[" . refactor-reset))
