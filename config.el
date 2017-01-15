@@ -10,7 +10,7 @@
 
 ;;; Keybindings
 (bind-map-set-keys ivan/leader-map
-  "u" #'refactor-select-refactoring)
+  "i" #'refactor-select-refactoring)
 (bind-keys
  ("M-]" . refactor-step-forward)
  ("M-[" . refactor-reset))
