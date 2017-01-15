@@ -44,9 +44,9 @@
   (refactor--increment-index))
 
 (defun refactor--run-current-step ()
-  (let ((func (nth refactor--index refactor--steps)))
-    (if func
-        (funcall func)
+  (let ((step-func (nth refactor--index refactor--steps)))
+    (if step-func
+        (funcall step-func)
       (message "%s: finished" refactor-refactoring))))
 
 (defun refactor--increment-index ()
