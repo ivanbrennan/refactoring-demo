@@ -2,6 +2,7 @@
 (set-frame-parameter nil 'alpha 100)
 (setq kmacro-ring-max 128)
 (remove-hook 'prog-mode-hook #'ivan/maybe-enable-ggtags)
+(remove-hook 'prog-mode-hook #'flyspell-prog-mode)
 (ggtags-mode   0)
 (flyspell-mode 0)
 
