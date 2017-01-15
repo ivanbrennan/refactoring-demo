@@ -120,3 +120,22 @@
 (fset 'refactor-hide-delegate-08
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 97 116 116 114 95 97 99 99 101 115 115 111 114 return 100 106] 0 "%d")) arg)))
 
+;;; Remove Middle Man
+(fset 'refactor-remove-middle-man-00
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 105 99 108 97 115 115 32 80 101 114 115 111 110 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-01
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 111 100 101 102 32 105 110 105 116 105 97 108 105 122 101 40 100 101 112 97 114 116 109 101 110 116 escape 111 64 100 101 112 97 114 116 109 101 110 116 32 61 32 100 101 112 97 114 116 109 101 110 116 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-02
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 101 110 100 36 return C-return 106 111 100 101 102 32 109 97 110 97 103 101 114 escape 111 64 100 101 112 97 114 116 109 101 110 116 46 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-03
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 101 110 100 36 return 111 return 99 108 97 115 115 32 68 101 112 97 114 116 109 101 110 116 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-04
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 99 108 97 115 115 32 68 101 112 97 114 116 109 101 110 116 return 111 97 116 116 114 95 114 101 97 100 101 114 32 58 109 97 110 97 103 101 114 escape C-return 106 111 100 101 102 32 105 110 105 116 105 97 108 105 122 101 40 109 97 110 97 103 101 114 escape 111 64 109 97 110 97 103 101 114 32 61 32 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-05
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 99 108 97 115 115 32 68 101 112 97 114 116 109 101 110 116 return 134217747 return 94 101 110 100 return 111 return 109 97 110 97 103 101 114 32 61 32 106 111 104 110 46 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-06
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 111 97 116 116 114 95 114 101 97 100 101 114 32 58 100 101 112 97 114 116 109 101 110 116 escape C-return] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-07
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 106 111 104 110 return 101 97 46 100 101 112 97 114 116 109 101 110 116 escape] 0 "%d")) arg)))
+(fset 'refactor-remove-middle-man-08
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 109 97 110 97 103 101 114 36 return 107 100 51 106] 0 "%d")) arg)))
