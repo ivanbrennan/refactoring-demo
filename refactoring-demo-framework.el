@@ -1,6 +1,4 @@
 ;;; Keybindings
-(bind-map-set-keys ivan/leader-map
-  "i" #'refactor-select-refactoring)
 (bind-keys
  ("M-]" . refactor-step-forward)
  ("M-[" . refactor-reset))
@@ -21,19 +19,27 @@
 (defvar-local refactor--steps nil)
 (defvar-local refactor--index 0)
 
-(defun refactor-select-refactoring (ref)
-  (interactive (list (completing-read "Select a refactoring: " refactor-refactorings)))
-  (refactor-reset)
-  (setq refactor-refactoring ref
-        refactor--steps (refactor--get-steps ref)))
+(defun refactor-init ()
+  (erase-buffer)
+  (let* ((ref   (refactor--get-refactoring))
+         (steps (refactor--get-steps ref)))
+    (setq
+     refactor-refactoring ref
+     refactor--steps steps)))
+
+(defun refactor--get-refactoring ()
+  (let* ((base-name (file-name-base buffer-file-name))
+         (prefix "^[[:digit:]]+_")
+         (name (replace-regexp-in-string prefix "" base-name)))
+    (replace-regexp-in-string "_" "-" name)))
+
+(defun refactor--get-steps (ref)
+  (apropos-internal (format "^refactor-%s-[[:digit:]]+" ref) 'commandp))
 
 (defun refactor-reset ()
   (interactive)
   (erase-buffer)
   (setq refactor--index 0))
-
-(defun refactor--get-steps (ref)
-  (apropos-internal (format "^refactor-%s-[[:digit:]]+" ref) 'commandp))
 
 ;;; Step functions
 (defun refactor-step-forward ()

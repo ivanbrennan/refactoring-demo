@@ -9,3 +9,5 @@
 (add-to-list 'load-path default-directory)
 (require 'refactoring-demo-framework)
 (require 'refactoring-step-kmacros)
+
+(refactor-init)
