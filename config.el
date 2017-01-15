@@ -35,7 +35,7 @@
   (setq refactor--index 0))
 
 (defun refactor--get-steps (ref)
-  (apropos-internal (concat "^refactor-" ref "-[[:digit:]]+") 'commandp))
+  (apropos-internal (format "^refactor-%s-[[:digit:]]+" ref) 'commandp))
 
 ;;; Step functions
 (defun refactor-step-forward ()
