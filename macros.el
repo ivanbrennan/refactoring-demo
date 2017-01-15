@@ -55,3 +55,48 @@
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217746 return 94 32 32 97 116 116 114 return 100 100] 0 "%d")) arg)))
 (fset 'refactor-extract-class-11
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217747 return 94 101 110 100 return 107 86 107 107 107 107 107 107 107 100] 0 "%d")) arg)))
+
+;;; Inline Class
+(fset 'refactor-inline-class-00
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([105 99 108 97 115 115 32 80 101 114 115 111 110 escape 111 97 116 116 114 95 114 101 97 100 101 114 32 58 110 97 109 101 escape C-return 106 111 100 101 102 32 105 110 105 116 105 97 108 105 122 101 return 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 32 61 32 84 101 108 101 112 104 111 110 101 78 117 109 98 101 114 46 110 101 119 escape 106 C-return 106 111 100 101 102 32 116 101 108 101 112 104 111 110 101 95 110 117 109 98 101 114 return 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 46 116 101 108 101 112 104 111 110 101 95 110 117 109 98 101 114 escape 106 C-return 106 111 100 101 102 32 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 return 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 escape 106 106 111 return 99 108 97 115 115 32 84 101 108 101 112 104 111 110 101 78 117 109 98 101 114 return 97 116 116 114 95 97 99 99 101 115 115 111 114 32 58 97 114 101 97 95 99 111 100 101 44 32 58 110 117 109 98 101 114 escape C-return 106 111 100 101 102 32 116 101 108 101 112 104 111 110 101 95 110 117 109 98 101 114 return 39 40 6 backspace 39 32 43 32 97 114 101 97 95 99 111 100 101 32 43 32 39 41 39 32 43 32 110 117 109 98 101 114 escape 106 106 111 return 109 97 114 116 105 110 32 61 32 80 101 114 115 111 110 46 110 101 119 escape 111 109 97 114 116 105 110 46 111 102 102 105 99 101 95 116 101 108 101 104 backspace 112 104 111 110 101 46 97 114 101 97 95 99 111 100 101 32 61 32 34 55 56 49 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-01
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 101 110 100 return S-return 111 100 101 102 32 97 114 101 97 95 99 111 100 101 return 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 46 97 114 101 97 95 99 111 100 101 escape 106 C-return 106 111 100 101 102 32 97 114 101 97 95 99 111 100 101 61 40 97 114 103 escape 111 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 46 97 114 101 97 95 99 111 100 101 32 61 32 97 114 103 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-02
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 101 110 100 return S-return 111 100 101 102 32 110 117 109 98 101 114 return 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 46 110 117 109 98 101 114 escape 106 C-return 106 111 100 101 102 32 110 117 109 98 101 114 61 40 97 114 103 escape 111 64 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 46 110 117 109 98 101 114 32 61 32 97 114 103 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-03
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217788 19 return 109 97 114 116 105 110 return 106 19 return 46 return 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120] 0 "%d")) arg)))
+(fset 'refactor-inline-class-04
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 106 111 97 116 116 114 95 97 99 99 101 115 115 111 114 32 58 111 102 102 105 99 101 95 97 114 101 97 95 99 111 100 101 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-05
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 97 114 101 97 95 99 111 100 101 61 return 111 64 111 102 102 105 99 101 95 97 114 101 97 95 99 111 100 101 32 61 32 97 114 103 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-06
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 97 114 101 97 95 99 111 100 101 36 return 106 83 64 111 102 102 105 99 101 95 97 114 101 97 95 99 111 100 101 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-07
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 106 106 111 97 116 116 114 95 97 99 99 101 115 115 111 114 32 58 111 102 102 105 99 101 95 110 117 109 98 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-08
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 110 117 109 98 101 114 61 return 111 64 111 102 102 105 99 101 95 110 117 109 98 101 114 32 61 32 97 114 103 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-09
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 110 117 109 98 101 114 36 return 106 83 64 111 102 102 105 99 101 95 110 117 109 98 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-10
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 116 101 108 101 112 104 111 110 101 95 110 117 109 98 101 114 36 return 106 83 39 17 40 39 32 43 32 64 111 102 102 105 99 101 95 97 114 101 97 95 99 111 100 101 32 43 32 39 41 39 32 43 32 64 111 102 102 105 99 101 95 110 117 109 98 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-11
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 111 102 102 105 99 101 95 116 101 108 101 112 104 111 110 101 return 100 97 112] 0 "%d")) arg)))
+(fset 'refactor-inline-class-12
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 97 114 101 97 95 99 111 100 101 61 return 106 106 100 100] 0 "%d")) arg)))
+(fset 'refactor-inline-class-13
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 110 117 109 98 101 114 61 13 106 106 100 100] 0 "%d")) arg)))
+(fset 'refactor-inline-class-14
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 64 111 102 102 105 99 101 95 116 101 108 112 104 backspace backspace 101 112 104 111 110 101 return 100 97 112] 0 "%d")) arg)))
+(fset 'refactor-inline-class-15
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 84 101 108 101 return 86 106 106 106 106 106 106 106 100] 0 "%d")) arg)))
+(fset 'refactor-inline-class-16
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 109 97 114 116 105 110 46 97 114 101 97 return 119 97 111 102 102 105 99 101 95 escape] 0 "%d")) arg)))
+(fset 'refactor-inline-class-17
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 97 114 101 97 95 99 111 100 101 return 100 97 112] 0 "%d")) arg)))
+(fset 'refactor-inline-class-18
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 97 114 101 97 95 99 111 100 101 61 return 100 97 112] 0 "%d")) arg)))
+(fset 'refactor-inline-class-19
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 110 117 109 98 101 114 return 100 51 106] 0 "%d")) arg)))
+(fset 'refactor-inline-class-20
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 110 117 109 98 101 114 return 107 100 51 106] 0 "%d")) arg)))
+
