@@ -100,3 +100,23 @@
 (fset 'refactor-inline-class-20
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 100 101 102 32 110 117 109 98 101 114 return 107 100 51 106] 0 "%d")) arg)))
 
+;;; Hide Delegate
+(fset 'refactor-hide-delegate-00
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([105 99 108 97 115 115 32 80 101 114 115 111 110 escape 111 97 116 116 114 95 97 99 99 101 115 115 111 114 32 58 100 101 112 97 114 116 109 101 110 116 escape] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-01
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([71 C-return 106 111 99 108 97 115 115 32 68 101 112 97 114 116 109 101 110 116 escape 111 97 116 116 114 95 114 101 97 100 101 114 32 58 109 97 110 97 103 101 114 escape C-return 106 111 100 101 102 32 105 110 105 116 105 97 108 105 122 101 40 109 97 110 97 103 101 114 escape 111 64 109 97 110 97 103 101 114 32 61 32 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-02
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([71 C-return 106 111 109 97 110 97 103 101 114 32 61 32 106 111 104 110 46 100 101 112 97 114 116 109 101 110 116 46 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-03
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 106 C-return 106 111 100 101 102 32 109 97 110 97 103 101 114 return 64 100 101 112 97 114 116 109 101 110 116 46 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-04
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 19 return 106 111 104 110 return 102 46 108 100 102 46] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-05
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 S-return 79 114 101 113 117 105 114 101 32 39 102 111 114 119 97 114 100 97 98 108 101 escape] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-06
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 99 108 97 115 115 32 80 101 114 115 111 110 36 return 111 101 120 116 101 110 100 32 70 111 114 119 97 114 100 97 98 108 101 escape C-return] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-07
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 109 97 110 97 103 101 114 36 return 100 50 106 79 100 101 102 95 100 101 108 101 103 97 116 111 114 32 58 64 100 101 112 97 114 116 109 101 110 116 44 32 58 109 97 110 97 103 101 114 escape] 0 "%d")) arg)))
+(fset 'refactor-hide-delegate-08
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 97 116 116 114 95 97 99 99 101 115 115 111 114 return 100 106] 0 "%d")) arg)))
+
