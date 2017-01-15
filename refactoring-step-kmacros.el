@@ -139,3 +139,5 @@
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 106 111 104 110 return 101 97 46 100 101 112 97 114 116 109 101 110 116 escape] 0 "%d")) arg)))
 (fset 'refactor-remove-middle-man-08
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([103 103 134217747 return 94 32 32 100 101 102 32 109 97 110 97 103 101 114 36 return 107 100 51 106] 0 "%d")) arg)))
+
+(provide 'refactoring-step-kmacros)

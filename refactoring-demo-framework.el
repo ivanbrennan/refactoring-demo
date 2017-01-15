@@ -1,13 +1,3 @@
-;;; Environment
-(set-frame-parameter nil 'alpha 100)
-(remove-hook 'prog-mode-hook #'ivan/maybe-enable-ggtags)
-(remove-hook 'prog-mode-hook #'flyspell-prog-mode)
-(ggtags-mode   0)
-(flyspell-mode 0)
-
-;;; Dependencies
-(load-file "macros.el")
-
 ;;; Keybindings
 (bind-map-set-keys ivan/leader-map
   "i" #'refactor-select-refactoring)
@@ -60,3 +50,5 @@
 
 (defun refactor--increment-index ()
   (setq refactor--index (1+ refactor--index)))
+
+(provide 'refactoring-demo-framework)
