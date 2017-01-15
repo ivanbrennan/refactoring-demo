@@ -22,9 +22,14 @@
 
 (defun refactor-select-refactoring (ref)
   (interactive (list (completing-read "Select a refactoring: " refactor-refactorings)))
+  (refactor-reset)
   (setq refactor-refactoring ref
-        refactor--steps (refactor--get-steps ref))
-  (refactor-reset))
+        refactor--steps (refactor--get-steps ref)))
+
+(defun refactor-reset ()
+  (interactive)
+  (erase-buffer)
+  (setq refactor--index 0))
 
 (defun refactor--get-steps (ref)
   (apropos-internal (concat "^refactor-" ref "-[[:digit:]]+") 'commandp))
@@ -46,11 +51,6 @@
 
 (defun refactor--increment-index ()
   (setq refactor--index (1+ refactor--index)))
-
-(defun refactor-reset ()
-  (interactive)
-  (erase-buffer)
-  (setq refactor--index 0))
 
 (bind-map-set-keys ivan/leader-map
   "u" #'refactor-select-refactoring)
