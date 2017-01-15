@@ -7,6 +7,13 @@
 ;;; Dependencies
 (load-file "macros.el")
 
+;;; Keybindings
+(bind-map-set-keys ivan/leader-map
+  "u" #'refactor-select-refactoring)
+(bind-keys
+ ("M-]" . refactor-step-forward)
+ ("M-[" . refactor-reset))
+
 ;;; Refactorings
 (defconst refactor-refactorings '(move-method
                                   move-field
@@ -51,9 +58,3 @@
 
 (defun refactor--increment-index ()
   (setq refactor--index (1+ refactor--index)))
-
-(bind-map-set-keys ivan/leader-map
-  "u" #'refactor-select-refactoring)
-(bind-keys
- ("M-]" . refactor-step-forward)
- ("M-[" . refactor-reset))
