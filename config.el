@@ -20,6 +20,9 @@
   "The refactoring to demo."
   :options refactor-refactorings)
 
+(defvar-local refactor--steps nil)
+(defvar-local refactor--index 0)
+
 (defun refactor-select-refactoring (ref)
   (interactive (list (completing-read "Select a refactoring: " refactor-refactorings)))
   (refactor-reset)
@@ -33,9 +36,6 @@
 
 (defun refactor--get-steps (ref)
   (apropos-internal (concat "^refactor-" ref "-[[:digit:]]+") 'commandp))
-
-(defvar-local refactor--steps nil)
-(defvar-local refactor--index 0)
 
 ;;; Step functions
 (defun refactor-step-forward ()
