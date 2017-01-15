@@ -48,14 +48,15 @@
 ;;; Step functions
 (defun refactor-step-forward ()
   (interactive)
-  (refactor--run-current-step)
-  (refactor--increment-index))
+  (and (refactor--run-current-step)
+       (refactor--increment-index)))
 
 (defun refactor--run-current-step ()
   (let ((step-func (nth refactor--index refactor--steps)))
     (if step-func
-        (funcall step-func)
-      (message "%s: finished" refactor-refactoring))))
+        (and (funcall step-func) t)
+      (message "%s: finished" refactor-refactoring)
+      nil)))
 
 (defun refactor--increment-index ()
   (setq refactor--index (1+ refactor--index)))
