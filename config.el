@@ -21,7 +21,7 @@
   :options refactor-refactorings)
 
 (defun refactor-select-refactoring (ref)
-  (interactive (list (completing-read "Set refactoring: " refactor-refactorings)))
+  (interactive (list (completing-read "Select a refactoring: " refactor-refactorings)))
   (setq refactor-refactoring ref
         refactor--steps (refactor--get-steps ref))
   (refactor-reset))
