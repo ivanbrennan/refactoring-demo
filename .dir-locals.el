@@ -1,1 +1,4 @@
-((ruby-mode . ((eval . (load-file "refactoring-demo-environment.el")))))
+((ruby-mode
+  . ((eval . (load (expand-file-name "refactoring-demo-environment")
+                   nil
+                   'no-message)))))
